@@ -1,0 +1,51 @@
+/* pages/person/myCollect.wxss */
+.foot{
+	margin-top: 50rpx;
+	padding: 20rpx;
+	width: 100%;
+}
+
+.foot-list{
+	
+	width: 94%;
+}
+
+.foot-item{
+	width: 100%;
+	height: 200rpx;
+	position: relative;
+	margin-bottom: 100rpx;
+}
+
+.foot-img{
+	width: 200rpx;
+	height: 200rpx;
+	border-radius: 25rpx;
+	margin-left: 30rpx;
+}
+
+.img-name{
+	position: absolute;
+	left: 280rpx;
+	color: black;
+	font-size: 25rpx;
+	top:20rpx;
+	font-weight: 700;
+}
+
+.img-intro{
+	background-color: rgba(0, 0, 0, 0.425);
+	border-radius: 25rpx;
+	padding-left: 20rpx;
+	padding-right: 10rpx;
+	padding-top: 5rpx;
+	padding-bottom: 5rpx;
+	position: absolute;
+	top:80rpx;
+	left: 250rpx;
+	color: white;
+	font-size: 20rpx;
+	width: 400rpx;
+	height: 100rpx;
+	overflow: hidden;
+}

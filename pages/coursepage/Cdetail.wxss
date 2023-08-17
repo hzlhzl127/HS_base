@@ -1,0 +1,112 @@
+/* pages/coursepage/Cdetail.wxss */
+page{
+	background-color: whitesmoke;
+}
+
+.topbox{
+	margin-top: 50rpx;
+	position: relative;
+	height: 500rpx;
+}
+
+
+.topname{
+	position: absolute;
+	color: black;
+	z-index: 3;
+	left: 50rpx;
+	bottom: 0rpx;
+
+}
+
+
+.midbox{
+	width:95%;
+	height: 1000rpx;
+	margin: 0rpx auto;
+	margin-top: 50rpx;
+}
+
+.midcon{
+	width: 85%;
+	height: 60%;
+	border-radius: 50rpx;
+	overflow: auto;
+	padding: 50rpx;
+	background-color: white;
+}
+.midtext{
+	line-height: 2;
+	font-size: 25rpx;
+}
+
+
+.mid-item-list{
+	position: absolute;
+	height: 400rpx;
+	width: 100%;
+
+}
+
+.mid-item{
+	position: relative;
+	background-color: white;
+	margin: 50rpx 20rpx;
+	margin-top: 20rpx;
+	height: 250rpx;
+	width: 250rpx;
+	border-radius: 25rpx;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+	display: flex; /* 添加 Flexbox 布局 */
+	justify-content: center; /* 在主轴方向居中对齐 */
+}
+
+.item-img{
+	position: absolute;
+	width: 250rpx;
+	height: 250rpx;
+	border-radius: 25rpx;
+	object-fit:cover;
+}
+
+.item-name{
+	position: absolute;
+	bottom: 20rpx;
+	font-weight:lighter;
+	font-size: 25rpx;
+}
+
+
+
+.back-to{
+  position: fixed;
+  bottom: 200rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2rpx 20rpx rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-checked {
+  position: fixed;
+  bottom: 200rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2rpx 50rpx rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top-icon {
+  width: 45rpx;
+  height: 45rpx;
+}

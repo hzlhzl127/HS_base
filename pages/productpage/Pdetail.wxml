@@ -1,0 +1,37 @@
+<!--pages/productpage/Pdetail.wxml-->
+<view class="topbox">
+		<image class="topimg" src="{{products.img1}}" mode=""/>
+		<view class="topname">{{products.name}}</view>
+		<image class="topicon" bind:tap="goScenicpage" src="/image/箭头-左.png" mode=""/>
+</view>
+
+<view class="midbox">
+	<view class="new-title" style="margin-left: 20rpx;">训练小结</view>
+	<view class="midcon">
+		<view class="midtext">{{products.content}}</view>
+	</view>
+</view>
+
+<view class="mid-item-list">
+	<view class="new-title" style="margin-left: 30rpx;">优秀成员</view>
+  <swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
+    <swiper-item wx:for="{{products.star}}" wx:key="name">
+      <view class="mid-item" bind:tap="previewImage" data-index="{{index}}">
+        <!-- 传递图片链接和索引到预览图片的处理函数 -->
+        <image class="item-img" src="{{item}}" mode=""/>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="foot">
+	<view class="new-title" style="margin-left: 20rpx;">精彩瞬间</view>
+	<view class="foot-list" wx:for="{{products.student}}">
+		<view class="foot-item" bind:tap="preview" data-index="{{index}}">
+			<image class="foot-img" src="{{item}}" mode=""/>
+		</view>
+	</view>
+</view>
+
+
+

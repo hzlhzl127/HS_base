@@ -1,0 +1,20 @@
+<!--pages/scenicpage/scenicpage.wxml-->
+<view class="search-box"><!--头部搜索框容器-->
+<!--搜索框-->
+	<view class="search">
+		<image class="question" src="/image/放大镜.png" mode=""/><input class="input" type="text" placeholder="输入搜索内容"/>
+	</view>
+</view>
+
+<!--线路列表-->
+
+<view class="foot">
+	<view class="foot-list" wx:for="{{scenicList}}">
+		<view class="foot-item" bindtap="goDetail" data-id="{{item._id}}">
+			<image class="foot-img" src="{{item.img2}}" mode=""/>
+			<view class="img-name">{{item.name}}</view>
+			<view class="img-intro">这是一个好地方这是一个好地方这是一个好地方,这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方</view>
+		</view>
+	</view>
+</view>
+

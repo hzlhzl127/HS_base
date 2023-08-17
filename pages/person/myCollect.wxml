@@ -1,0 +1,21 @@
+<!--pages/person/myCollect.wxml-->
+<view class="foot">
+	<view class="foot-list" wx:for="{{LineList}}">
+		<view class="foot-item" bind:tap="LgoDetail" data-id="{{item._id}}">
+			<image class="foot-img" src="{{item.img1}}" mode=""/>
+			<view class="img-name">{{item.name}}</view>
+			<view class="img-intro">这是一个好地方这是一个好地方这是一个好地方,这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方</view>
+		</view>
+	</view>
+
+	<view class="foot-list" wx:for="{{courseList}}">
+		<view class="foot-item" bind:tap="SgoDetail" data-id="{{item._id}}">
+			<image class="foot-img" src="{{item.img1}}" mode=""/>
+			<view class="img-name">{{item.name}}</view>
+			<view class="img-intro">这是一个好地方这是一个好地方这是一个好地方,这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方</view>
+		</view>
+	</view>
+
+	
+</view>
+ 

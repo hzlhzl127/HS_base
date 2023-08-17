@@ -1,0 +1,31 @@
+<!--pages/linepage/Lpage.wxml-->
+<view class="topbox">
+		<image class="topimg" src="{{lines.img1}}" mode=""/>
+		<view class="topname">{{lines.name}}</view>
+		<image class="topicon" bind:tap="goScenicpage" src="/image/箭头-左.png" mode=""/>
+</view>
+
+<view class="midbox">
+	<view class="midcon">
+		<view class="midtext">{{lines.content}}</view>
+	</view>
+</view>
+
+<view class="phoneBox">
+	<button style="width: 700rpx;font-size: small;background-color: white;" bindtap="phone">点击此处,电话资讯</button>
+</view>
+
+<view class="mid-item-list">
+  <swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
+    <swiper-item wx:for="{{arrayImg}}" wx:key="name">
+      <view class="mid-item" bind:tap="previewImage" data-index="{{index}}">
+        <!-- 传递图片链接和索引到预览图片的处理函数 -->
+        <image class="item-img" src="{{item}}" mode=""/>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="{{back}}" bindtouchend="collect" bindtouchstart="checked">
+  <image class="back-to-top-icon" src="/image/爱心.png"></image>
+</view>

@@ -1,0 +1,146 @@
+<!--index.wxml-->
+<!--头部搜索栏那一块-->
+
+<view class="search-box"><!--头部搜索框容器-->
+	<view class="search-text">黄石</view>
+<!--搜索框-->
+	<view class="search">
+		<image class="question" src="/image/放大镜.png" mode=""/><input class="input" type="text" placeholder="输入搜索内容"/>
+	</view>
+</view>
+
+<!--搜索栏下面推荐一板-->
+<view class="mid-box">
+	<view class="mid-sort">
+		<view class="{{Sname1}}" id="1" bindtouchstart="SnameCheck">推荐</view>
+		<view class="{{Sname2}}" id="2" bindtouchstart="SnameCheck">课程</view>
+		<view class="{{Sname3}}" id="3" bindtouchstart="SnameCheck">视频</view>
+		<view class="{{Sname4}}" id="4" bindtouchstart="SnameCheck">学员</view>
+	</view>
+
+	<view class="mid-item-list" wx:if="{{show1}}">
+		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
+			<swiper-item wx:for="{{scenicList}}" wx:key="name" data-id="{{item._id}}" bind:tap="goDetailS">
+				<view class="mid-item">
+					<image class="item-img" src="{{item.img1}}" mode=""/>
+					<view class="item-name">{{item.name}}</view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	
+	<view class="mid-item-list" wx:if="{{show2}}">
+		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}"  easing-function="easeInOutCubic" display-multiple-items="2.4" autoplay="true">
+			<swiper-item wx:for="{{courseList}}" wx:key="name">
+				<view class="mid-item">
+					<image class="item-img" src="{{item.img1}}" mode=""/>
+					<view class="item-name">{{item.name}}</view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+
+	<view class="mid-item-list" wx:if="{{show3}}">
+		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
+			<swiper-item wx:for="{{lineList}}" wx:key="name">
+				<view class="mid-item">
+					<image class="item-img" src="{{item.img1}}" mode=""/>
+					<view class="item-name">{{item.name}}</view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+
+	<view class="mid-item-list" wx:if="{{show4}}">
+		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
+			<swiper-item wx:for="{{productList}}" wx:key="name" bind:tap="goLinepage">
+				<view class="mid-item">
+					<image class="item-img" src="{{item.img1}}" mode=""/>
+					<view class="item-name">{{item.name}}</view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+</view>
+
+
+<!---热门分类-->
+
+<view class="kind-box">
+	<view class="new-title" bind:tap="goLinepage">热门分类</view>
+	<view class="kind-list">
+
+		<view class="kind-item">
+			<view class="kind-button1" bind:tap="goLinepage">
+			<button class="button">
+			<image class="img" src="/image/Flag.png" mode=""/>
+			</button>
+			</view>
+				<view class="kind-name">训练项目</view>
+		</view>	
+
+		<view class="kind-item">
+			<view class="kind-button2" bind:tap="goScenicpage">
+				<button class="button">
+				<image class="img" src="/image/Car.png" mode=""/>
+			</button>
+			</view>
+				<view class="kind-name">文化生活</view>
+		</view>	
+
+		<view class="kind-item">
+			<view class="kind-button3" bind:tap="goCoursepage">
+				<button class="button">
+				<image class="img" src="/image/MapTrifold.png" mode=""/>
+			</button>
+			</view>
+				<view class="kind-name">基地漫游</view>
+		</view>	
+
+		<view class="kind-item">
+			<view class="kind-button4" bind:tap="goProductpage">
+				<button class="button">
+				<image class="img" src="/image/Suitcase.png" mode=""/>
+			</button>
+			</view>
+				<view class="kind-name">往期回顾</view>
+		</view>	
+
+	</view>
+</view>
+
+
+<!--政策资讯板块-->
+<view class="new-box">
+	<view class="new-title" bind:tap="goLinepage">政策资讯</view>
+	<view class="news">
+		<swiper class="news-swiper" indicator-dots="{{false}}" circular="{{true}}" autoplay="true">
+				<swiper-item wx:for="{{newsList}}" >
+					{{item.content}}
+				</swiper-item>
+		</swiper>
+	</view>
+</view>
+
+<!--最新推荐-->
+<view class="foot">
+	<view class="new-title">最新推荐</view>
+	<view class="foot-list" wx:for="{{scenicList}}">
+		<view class="foot-item" data-id="{{item._id}}" bind:tap="goDetailS">
+			<image class="foot-img" src="{{item.img2}}" mode=""/>
+			<view class="img-name">{{item.name}}</view>
+			<view class="img-intro">这是一个好地方这是一个好地方这是一个好地方,这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方这是一个好地方</view>
+		</view>
+	</view>
+</view>
+
+
+<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="3">
+</swiper>
+
+<view class="tabarBox">
+	<view class="tabar">
+		<image class="tabar-icon" src="{{tabar1}}" bind:tap="tabar" id="1" mode=""/>
+		<image class="tabar-icon" src="{{tabar2}}" bind:tap="tabar" id="2" mode=""/>
+	</view>
+</view>

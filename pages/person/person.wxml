@@ -1,0 +1,54 @@
+<!--pages/person/person.wxml-->
+<!--底部-->
+<view class="tabarBox">
+	<view class="tabar">
+		<image class="tabar-icon" src="{{tabar1}}" bind:tap="tabar" id="1" mode=""/>
+		<image class="tabar-icon" src="{{tabar2}}" bind:tap="tabar" id="2" mode=""/>
+	</view>
+</view>
+
+<!--头部-->
+<view class="toproot" wx:if="{{user&&user.name}}">
+		<image src="{{user.avatarUrl}}" class="topimg" />
+		<view>
+			<view class="top_name">{{user.name}}</view>
+	     <view class = "login_out" bindtap="loginOut">退出登录</view>
+		</view>
+</view>
+
+
+<view class="toproot" wx:else>
+		<image src="/image/Car.png" class="topimg" />
+		<view>
+			<view class="top_login" bind:tap="getUserProfile">微信授权,一键登录</view>
+		</view>
+</view>
+
+
+<!--选择栏-->
+
+<view class="box">
+
+<view >
+
+	<button style="width: 1000rpx;" class="item" id="1" bindtouchend="myjoin" bindtouchstart="touch">
+		<view class="item_name">🎫我的收藏</view>
+		<image src="../../picture/箭头 右.png" class ="right_arrow"/>
+	</button>
+
+</view>
+
+
+	<button style="width: 1000rpx;" class="item" id="4" bindtouchend="myadv" bindtouchstart="touch" open-type="feedback">
+		<view class="item_name">💡反馈建议</view>
+		<image src="../../picture/箭头 右.png" class ="right_arrow"/>
+	</button>
+
+
+	<button style="width: 1000rpx;" class="item" id="5" bindtouchend="mybot" bindtouchstart="touch" open-type="contact">
+		<view class="item_name">💬在线客服</view>
+		<image src="../../picture/箭头 右.png" class ="right_arrow"/>
+	</button>
+
+
+</view>

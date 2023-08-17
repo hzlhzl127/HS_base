@@ -1,0 +1,33 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/map/map",
+		"pages/linepage/linepage",
+		"pages/scenicpage/scenicpage",
+		"pages/coursepage/coursepage",
+		"pages/productpage/productpage",
+		"pages/scenicpage/Sdetail",
+		"pages/linepage/Lpage",
+		"pages/productpage/Pdetail",
+		"pages/coursepage/Cdetail",
+		"pages/person/person",
+		"pages/login/login",
+		"pages/add/add",
+		"pages/person/myCollect"
+	],
+
+	"lazyCodeLoading": "requiredComponents",
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#2fafd8",
+		"navigationBarTitleText": "Weixin"
+	},
+	"plugins": {
+		"tencentvideo": {
+			"version": "1.4.0",
+			"provider": "wxa75efa648b60994b"
+		}
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
+}

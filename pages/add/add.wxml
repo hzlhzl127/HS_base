@@ -1,0 +1,3 @@
+<!--pages/add/add.wxml-->
+<button bindtap="add">启动云函数</button>
+<button bindtap="getid">获得openid</button>

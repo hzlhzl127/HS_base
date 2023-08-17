@@ -1,0 +1,9 @@
+{
+	"navigationBarBackgroundColor": "#ffffff",
+	"navigationBarTitleText": "经典课堂",
+	"navigationBarTextStyle":"black",
+
+	"usingComponents": {
+    "txv-component": "plugin://tencentvideo/video"
+  }
+}
