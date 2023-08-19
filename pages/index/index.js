@@ -128,6 +128,27 @@ Page({
 		})
 	},
 
+	goDetailC:function(e){
+		console.log('成功拿到的数据是',e.currentTarget.dataset.id),
+		wx.navigateTo({
+			url: '../coursepage/Cdetail?id='+e.currentTarget.dataset.id,
+		})
+	},
+
+	goDetailL:function(e){
+		console.log('成功拿到的数据是',e.currentTarget.dataset.id),
+		wx.navigateTo({
+			url: '../linepage/Lpage?id='+e.currentTarget.dataset.id,
+		})
+	},
+
+	goDetailP:function(e){
+		console.log('成功拿到的数据是',e.currentTarget.dataset.id),
+		wx.navigateTo({
+			url: '../productpage/Pdetail?id='+e.currentTarget.dataset.id,
+		})
+	},
+
 	tabar:function (event) {
 		const buttonId = event.currentTarget.id;
 		if(buttonId==2){
