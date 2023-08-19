@@ -2,7 +2,7 @@
 <!--头部搜索栏那一块-->
 
 <view class="search-box"><!--头部搜索框容器-->
-	<view class="search-text">黄石</view>
+	<view class="search-text">锦楷</view>
 <!--搜索框-->
 	<view class="search">
 		<image class="question" src="/image/放大镜.png" mode=""/><input class="input" type="text" placeholder="输入搜索内容"/>
@@ -13,8 +13,8 @@
 <view class="mid-box">
 	<view class="mid-sort">
 		<view class="{{Sname1}}" id="1" bindtouchstart="SnameCheck">推荐</view>
-		<view class="{{Sname2}}" id="2" bindtouchstart="SnameCheck">课程</view>
-		<view class="{{Sname3}}" id="3" bindtouchstart="SnameCheck">视频</view>
+		<view class="{{Sname2}}" id="2" bindtouchstart="SnameCheck">视频</view>
+		<view class="{{Sname3}}" id="3" bindtouchstart="SnameCheck">训练</view>
 		<view class="{{Sname4}}" id="4" bindtouchstart="SnameCheck">学员</view>
 	</view>
 
@@ -31,7 +31,7 @@
 	
 	<view class="mid-item-list" wx:if="{{show2}}">
 		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}"  easing-function="easeInOutCubic" display-multiple-items="2.4" autoplay="true">
-			<swiper-item wx:for="{{courseList}}" wx:key="name">
+			<swiper-item wx:for="{{courseList}}" wx:key="name" data-id="{{item._id}}" bind:tap="goDetailC">
 				<view class="mid-item">
 					<image class="item-img" src="{{item.img1}}" mode=""/>
 					<view class="item-name">{{item.name}}</view>
@@ -42,7 +42,7 @@
 
 	<view class="mid-item-list" wx:if="{{show3}}">
 		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
-			<swiper-item wx:for="{{lineList}}" wx:key="name">
+			<swiper-item wx:for="{{lineList}}" wx:key="name" data-id="{{item._id}}" bind:tap="goDetailL">
 				<view class="mid-item">
 					<image class="item-img" src="{{item.img1}}" mode=""/>
 					<view class="item-name">{{item.name}}</view>
@@ -53,7 +53,7 @@
 
 	<view class="mid-item-list" wx:if="{{show4}}">
 		<swiper class="swiper-container" indicator-dots="{{false}}" circular="{{true}}" display-multiple-items="2.4" easing-function="easeInOutCubic" autoplay="true">
-			<swiper-item wx:for="{{productList}}" wx:key="name" bind:tap="goLinepage">
+			<swiper-item wx:for="{{productList}}" wx:key="name" data-id="{{item._id}}" bind:tap="goDetailP">
 				<view class="mid-item">
 					<image class="item-img" src="{{item.img1}}" mode=""/>
 					<view class="item-name">{{item.name}}</view>
@@ -124,7 +124,7 @@
 
 <!--最新推荐-->
 <view class="foot">
-	<view class="new-title">最新推荐</view>
+	<view class="new-title">精彩生活</view>
 	<view class="foot-list" wx:for="{{scenicList}}">
 		<view class="foot-item" data-id="{{item._id}}" bind:tap="goDetailS">
 			<image class="foot-img" src="{{item.img2}}" mode=""/>
