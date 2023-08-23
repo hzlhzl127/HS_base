@@ -22,7 +22,7 @@ Page({
 		const productC = db.collection('product')
 		const newsC = db.collection('news')
 
-		scenicCollection.limit(4).get().then(res=>{
+		scenicCollection.get().then(res=>{
 			console.log("景点列表请求成功",res)
 			this.setData({
 				scenicList:res.data
