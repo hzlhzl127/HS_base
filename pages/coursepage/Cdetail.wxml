@@ -1,7 +1,7 @@
 <!--pages/coursepage/Cdetail.wxml-->
 <view class="topbox">
 	
-<txv-component autoplay="{{false}}" usePoster="{{false}}" vid="{{lines.vid}}" playerid="tvp6"><!-- 里面可以放插槽 --></txv-component>
+<txv-component autoplay="{{false}}" usePoster="{{false}}" vid="{{lines.vid}}" playerid="tvp6" border-radius="20rpx" usePoster="{{true}}"><!-- 里面可以放插槽 --></txv-component>
 
 <view class="topname">{{lines.name}}</view>
 </view>

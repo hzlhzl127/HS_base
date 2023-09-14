@@ -163,4 +163,18 @@ Page({
 		console.log(buttonId);
 	},
 
+	map:function(e){
+		let plugin = requirePlugin('routePlan');
+		let key = 'GGVBZ-K3RK4-SHOUR-FFC54-UCTVQ-RLF3Z';  //使用在腾讯位置服务申请的key
+		let referer = '研学黄黄';   //调用插件的app的名称
+		let endPoint = JSON.stringify({  //终点
+			'name': '黄石市青少年工业研学基地',
+			'latitude': 30.219974,
+			'longitude': 114.883318
+		});
+		wx.navigateTo({
+			url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
+		});
+	},
+
 });

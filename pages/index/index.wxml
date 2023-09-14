@@ -120,12 +120,12 @@
 </view>	
 
 <view class="kind-item">
-	<view class="kind-button6" bind:tap="">
+	<view class="kind-button6" bind:tap="map">
 		<button class="button">
 		<image class="img" src="/image/Car.png" mode=""/>
 	</button>
 	</view>
-		<view class="kind-name">按钮6</view>
+		<view class="kind-name">前往导航</view>
 </view>	
 
 <view class="kind-item">
